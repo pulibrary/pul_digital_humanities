@@ -22,6 +22,7 @@ scripts[] = js/pul-digital-humanities.behaviors.js
 ; Regions
 ; ========================================
 regions[branding] = Branding
+regions[child_branding] = Child Branding
 regions[header] = Header
 regions[navigation] = Navigation
 regions[highlighted] = Highlighted

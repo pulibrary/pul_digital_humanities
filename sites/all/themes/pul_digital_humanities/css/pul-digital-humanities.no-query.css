@@ -2,3 +2,35 @@
 img, media {
   max-width: 100%;
 }
+
+.l-branding--child {
+  background: white;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.l-branding--child p {
+  margin: 0;
+}
+.l-branding--child img {
+  display: block;
+}
+
+.wrapper--navigation {
+  background: transparent;
+  border-bottom: none;
+}
+
+.wrapper--navigation .centered-navigation-menu > ul > li a {
+  margin: 0 0.5em;
+  padding: 0 0.5em;
+}
+
+.front .view-recent-article-posts .views-row {
+  clear: both;
+  min-height: 165px;
+}
+.front .view-recent-article-posts .views-field-field-featured-image {
+  float: left;
+  margin-right: 1em;
+}

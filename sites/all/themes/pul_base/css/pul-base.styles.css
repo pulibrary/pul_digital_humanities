@@ -596,7 +596,7 @@ h3 {
 .breadcrumb li:after {
   border-left-color: #e8e6df;
 }
-.breadcrumb a {
+.breadcrumb a, .breadcrumb span {
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
@@ -612,23 +612,23 @@ h3 {
   position: relative;
   text-decoration: none;
 }
-.breadcrumb a:first-child {
+.breadcrumb a:first-child, .breadcrumb span:first-child {
   padding-left: 12px;
   border-top-left-radius: 0.1875em;
   border-bottom-left-radius: 0.1875em;
 }
-.breadcrumb a:last-child {
+.breadcrumb a:last-child, .breadcrumb span:last-child {
   background-color: #e8e6df;
   color: black;
   border-bottom-right-radius: 0.1875em;
   border-top-right-radius: 0.1875em;
   padding-right: 12px;
 }
-.breadcrumb a:hover {
+.breadcrumb a:hover, .breadcrumb span:hover {
   color: #477dca;
   background-color: #e8e6df;
 }
-.breadcrumb a:hover:after {
+.breadcrumb a:hover:after, .breadcrumb span:hover:after {
   border-left-color: #e8e6df;
 }
 

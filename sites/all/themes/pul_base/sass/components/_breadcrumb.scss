@@ -49,7 +49,7 @@
     }
   }
 
-  a {
+  a, span {
     @include inline-block;
     background-color: $breadcrumb-background;
     border: $breadcrumb-border;

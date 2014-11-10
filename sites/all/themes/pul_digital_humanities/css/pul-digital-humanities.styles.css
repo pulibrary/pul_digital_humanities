@@ -1,31 +1,32 @@
 /* No files to import found in abstractions/**\/* */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/aliauw\/Projects\/pul_digital_humanities\/sites\/all\/themes\/pul_digital_humanities\/sass\/base\/_media\.scss}line{font-family:\000031}}
 img, media {
-  max-width: 100%;
-}
+  max-width: 100%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/aliauw\/Projects\/pul_digital_humanities\/sites\/all\/themes\/pul_digital_humanities\/sass\/components\/_branding\.scss}line{font-family:\000031}}
 .l-branding--child {
   background: white;
   max-width: 1200px;
   margin: 0 auto;
-  overflow: hidden;
-}
-.l-branding--child p {
-  margin: 0;
-}
-.l-branding--child img {
-  display: block;
-}
+  overflow: hidden; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/aliauw\/Projects\/pul_digital_humanities\/sites\/all\/themes\/pul_digital_humanities\/sass\/components\/_branding\.scss}line{font-family:\000037}}
+  .l-branding--child p {
+    margin: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/aliauw\/Projects\/pul_digital_humanities\/sites\/all\/themes\/pul_digital_humanities\/sass\/components\/_branding\.scss}line{font-family:\0000310}}
+  .l-branding--child img {
+    display: block; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/aliauw\/Projects\/pul_digital_humanities\/sites\/all\/themes\/pul_digital_humanities\/sass\/components\/_navigation\.scss}line{font-family:\000031}}
 .wrapper--navigation {
   background: transparent;
   border-bottom: none;
-  height: auto;
-}
-.wrapper--navigation .menu .leaf .active {
-  background: #f5f4f1;
-  color: #e87511;
-}
+  height: auto; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/aliauw\/Projects\/pul_digital_humanities\/sites\/all\/themes\/pul_digital_humanities\/sass\/components\/_navigation\.scss}line{font-family:\000037}}
+  .wrapper--navigation .menu .leaf .active {
+    background: #f5f4f1;
+    color: #e87511; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/aliauw\/Projects\/pul_digital_humanities\/sites\/all\/themes\/pul_digital_humanities\/sass\/components\/_navigation\.scss}line{font-family:\0000313}}
 .wrapper--navigation .centered-navigation-menu > ul > li a {
   margin: 0 0.5em;
   padding: 0.5em;
@@ -33,27 +34,44 @@ img, media {
   font-family: "Roboto", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: bold;
-  border-radius: 4px;
-}
+  border-radius: 4px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/aliauw\/Projects\/pul_digital_humanities\/sites\/all\/themes\/pul_digital_humanities\/sass\/components\/_people\.scss}line{font-family:\000031}}
+.person-full-name {
+  font-weight: bold; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/aliauw\/Projects\/pul_digital_humanities\/sites\/all\/themes\/pul_digital_humanities\/sass\/components\/_recent-posts\.scss}line{font-family:\000032}}
 .front .view-recent-article-posts .views-row {
-  clear: both;
-  min-height: 165px;
-}
+  clear: both; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/aliauw\/Projects\/pul_digital_humanities\/sites\/all\/themes\/pul_digital_humanities\/sass\/components\/_recent-posts\.scss}line{font-family:\000035}}
 .front .view-recent-article-posts .views-field-field-featured-image {
   float: left;
-  margin-right: 1em;
-}
+  margin-right: 1em; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/aliauw\/Projects\/pul_digital_humanities\/sites\/all\/themes\/pul_digital_humanities\/sass\/components\/_search\.scss}line{font-family:\000031}}
 .l-region--branding .block--search-form form > div {
-  margin-top: 0.8em;
-}
+  margin-top: 0.8em; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/aliauw\/Projects\/pul_digital_humanities\/sites\/all\/themes\/pul_digital_humanities\/sass\/components\/_slideshow\.scss}line{font-family:\000031}}
 .flexslider {
   margin-bottom: 0;
   border: none;
-}
-.flexslider .views-field-title {
-  position: relative;
-  bottom: 0;
-}
+  background: #000;
+  color: #fff; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/aliauw\/Projects\/pul_digital_humanities\/sites\/all\/themes\/pul_digital_humanities\/sass\/components\/_slideshow\.scss}line{font-family:\000038}}
+  .flexslider .views-field-title {
+    padding: 1em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/aliauw\/Projects\/pul_digital_humanities\/sites\/all\/themes\/pul_digital_humanities\/sass\/components\/_slideshow\.scss}line{font-family:\0000311}}
+    .flexslider .views-field-title a {
+      color: #fff; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/aliauw\/Projects\/pul_digital_humanities\/sites\/all\/themes\/pul_digital_humanities\/sass\/components\/_slideshow\.scss}line{font-family:\0000315}}
+    .flexslider .views-field-title p {
+      margin: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/aliauw\/Projects\/pul_digital_humanities\/sites\/all\/themes\/pul_digital_humanities\/sass\/components\/_subscribe\.scss}line{font-family:\000032}}
+.four_five_three_stacked-region--third .pane-1 p {
+  margin: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/aliauw\/Projects\/pul_digital_humanities\/sites\/all\/themes\/pul_digital_humanities\/sass\/components\/_subscribe\.scss}line{font-family:\000035}}
+.four_five_three_stacked-region--third .pane-1 img {
+  float: left;
+  margin-right: 1em; }

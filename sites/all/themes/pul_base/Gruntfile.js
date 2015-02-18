@@ -1,126 +1,77 @@
-'use strict';
-
 module.exports = function (grunt) {
 
+  "use strict";
+
+  require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
+
   grunt.initConfig({
-    watch: {
-      options: {
-        livereload: true
-      },
-      sass: {
-        files: ['sass/{,**/}*.{scss,sass}'],
-        //tasks: ['sass'],
-        tasks: ['compass:dev'],
-        options: {
-          livereload: false
+
+    pkg: grunt.file.readJSON('package.json'),
+
+      cssc: {
+        build: {
+          options: {
+            consolidateViaDeclarations: true,
+            consolidateViaSelectors:    true,
+            consolidateMediaQueries:    true
+          },
+          files: {
+            'snippets/pul-base.libguides.css': 'css/pul-base.libguides.css'
+          }
         }
       },
-      registry: {
-        files: ['*.info', '{,**}/*.{php,inc}'],
-        tasks: ['shell'],
-        options: {
-          livereload: false
+
+      cssmin: {
+        build: {
+          src: 'snippets/pul-base.libguides.css',
+          dest: 'snippets/pul-base.libguides.min.css'
         }
       },
-      images: {
-        files: ['images/**']
+
+      compass: {
+        options: {
+          config: 'config.rb',
+          bundleExec: true,
+          force: true,
+          debugInfo: false,
+          quiet: true
+        },
+        build: {
+          options: {
+            environment: 'production',
+            sassDir: 'sass',
+            cssDir: 'css'
+          }
+        }
       },
-      css: {
-        files: ['css/{,**/}*.css']
+
+      jshint: {
+        options: {
+          jshintrc: '.jshintrc'
+        },
+        all: ['js/{,**/}*.js', '!js/{,**/}*.min.js']
       },
-      js: {
-        files: ['js/{,**/}*.js', '!js/{,**/}*.min.js'],
-        tasks: ['jshint']//, 'uglify:dev']
+
+      watch: {
+        css: {
+          files: '**/*.scss',
+          tasks: ['compass'],
+          options: {
+            livereload: true
+          }
+        }
+      },
+
+      shell: {
+        all: {
+          command: 'drush cache-clear theme-registry'
+        }
       }
-    },
 
-    shell: {
-      all: {
-        command: 'drush cache-clear theme-registry'
-      }
-    },
-
-    compass: {
-      options: {
-        config: 'config.rb',
-        bundleExec: true,
-        force: true,
-        debugInfo: false,
-        quiet: true
-      },
-      dev: {
-        options: {
-          environment: 'production'
-        }
-      },
-      dist: {
-        options: {
-          environment: 'production'
-        }
-      }
-    },
-
-    jshint: {
-      options: {
-        jshintrc: '.jshintrc'
-      },
-      all: ['js/{,**/}*.js', '!js/{,**/}*.min.js']
-    }//,
-
-    // uglify: {
-    //   dev: {
-    //     options: {
-    //       mangle: false,
-    //       compress: false,
-    //       beautify: true
-    //     },
-    //     files: [{
-    //       expand: true,
-    //       flatten: true,
-    //       cwd: 'js',
-    //       dest: 'js',
-    //       src: ['**/*.js', '!**/*.min.js'],
-    //       rename: function(dest, src) {
-    //         var folder = src.substring(0, src.lastIndexOf('/'));
-    //         var filename = src.substring(src.lastIndexOf('/'), src.length);
-    //         filename = filename.substring(0, filename.lastIndexOf('.'));
-    //         return dest + '/' + folder + filename + '.min.js';
-    //       }
-    //     }]
-    //   },
-    //   dist: {
-    //     options: {
-    //       mangle: true,
-    //       compress: true
-    //     },
-    //     files: [{
-    //       expand: true,
-    //       flatten: true,
-    //       cwd: 'js',
-    //       dest: 'js',
-    //       src: ['**/*.js', '!**/*.min.js'],
-    //       rename: function(dest, src) {
-    //         var folder = src.substring(0, src.lastIndexOf('/'));
-    //         var filename = src.substring(src.lastIndexOf('/'), src.length);
-    //         filename = filename.substring(0, filename.lastIndexOf('.'));
-    //         return dest + '/' + folder + filename + '.min.js';
-    //       }
-    //     }]
-    //   }
-    // }
   });
 
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-contrib-compass');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  // grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-shell');
-
-  grunt.registerTask('build', [
-    // 'uglify:dist',
-    'compass:dist',
-    'jshint'
-  ]);
+  grunt.registerTask('default',   ['']);
+  grunt.registerTask('build', ['compass', 'shell']);
+  grunt.registerTask('tigerstyle',  ['cssc', 'cssmin']);
 
 };
